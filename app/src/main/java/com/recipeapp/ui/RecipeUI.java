@@ -8,6 +8,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import main.java.com.recipeapp.datahandler.DataHandler;
+
 public class RecipeUI {
     private BufferedReader reader;
     private DataHandler dataHandler;
@@ -35,10 +37,10 @@ public class RecipeUI {
 
                 switch (choice) {
                     case "1":
-                    readData();
+                    displayRecipes();
                         break;
                     case "2":
-                    writeData();
+                    addNewRecipes();
                         break;
                     case "3":
                         break;
@@ -53,6 +55,25 @@ public class RecipeUI {
                 System.out.println("Error reading input from user: " + e.getMessage());
             }
         }
+    }
+
+    private void displayRecipes(){
+        RecipeFileHandler handler = new RecipeFileHandler();
+        ArrayList<String> data = new ArrayList<>();
+        data = handler.readRecipes();
+        if(data.isEmpty()){
+            System.out.println("No recipes available.");
+            return;
+        }
+        String[] lists;
+                    for(String datas : data){
+                        lists = datas.split(",", 2);
+                    System.out.println("-----------------------------------");
+                    System.out.println("Recipe Name: " + lists[0]);
+                    System.out.println("Main Ingredients: " + lists[1]);
+            }
+            System.out.println("-----------------------------------");
+ 
     }
 
     public void addNewRecipes(){

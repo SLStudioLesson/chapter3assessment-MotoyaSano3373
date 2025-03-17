@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 import main.java.com.recipeapp.ui.Recipe;
 
-public class JSONDataHandeler extends DataHandler{
+public class JSONDataHandler implements DataHandler{
 
         @Override
-    // 文字列CSVを返してください。
+    // 文字列JSONを返してください。
     public String getMode(){
         return "JSON";
     }
