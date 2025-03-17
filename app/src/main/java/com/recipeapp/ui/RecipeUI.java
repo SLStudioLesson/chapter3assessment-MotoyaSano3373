@@ -1,6 +1,8 @@
 package com.recipeapp.ui;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -33,8 +35,10 @@ public class RecipeUI {
 
                 switch (choice) {
                     case "1":
+                    readData();
                         break;
                     case "2":
+                    writeData();
                         break;
                     case "3":
                         break;
@@ -48,6 +52,16 @@ public class RecipeUI {
             } catch (IOException e) {
                 System.out.println("Error reading input from user: " + e.getMessage());
             }
+        }
+    }
+
+    public void addNewRecipes(){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            writer.write(recipeName + "," + ingredients);
+            writer.newLine();
+            System.out.println("Recipe added successfully.");
+        } catch (IOException e) {
+            System.out.println("ファイル操作エラー: " + e.getMessage());
         }
     }
 }
