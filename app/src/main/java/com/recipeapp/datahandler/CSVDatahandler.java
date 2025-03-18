@@ -1,4 +1,4 @@
-package main.java.com.recipeapp.datahandler;
+package com.recipeapp.datahandler;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import main.java.com.recipeapp.ui.Recipe;
+import com.recipeapp.ui.Recipe;
 
     public class CSVDataHandler implements DataHandler{
     // レシピデータを格納するCSVファイルのパス。
@@ -38,5 +38,9 @@ import main.java.com.recipeapp.ui.Recipe;
     // 以降の設問で処理を実装するため定義のみ行います。
     public void writeData(Recipe recipe) throws IOException{
 }
+public ArrayList<Recipe> searchData(String keyword) throws IOException{
+
+}
+
     }
 

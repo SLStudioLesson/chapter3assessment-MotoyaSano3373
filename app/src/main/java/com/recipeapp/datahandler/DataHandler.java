@@ -1,9 +1,9 @@
-package main.java.com.recipeapp.datahandler;
+package com.recipeapp.datahandler;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import main.java.com.recipeapp.ui.Recipe;
+import com.recipeapp.ui.Recipe;
 
 public interface DataHandler {
     // 現在のモードを返します。

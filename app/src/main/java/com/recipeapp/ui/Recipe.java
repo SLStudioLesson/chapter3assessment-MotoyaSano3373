@@ -1,4 +1,4 @@
-package main.java.com.recipeapp.ui;
+package com.recipeapp.ui;
 
 import com.recipeapp.ui;
 

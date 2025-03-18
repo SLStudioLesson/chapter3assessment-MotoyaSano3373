@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.com.recipeapp.datahandler.DataHandler;
+import com.recipeapp.datahandler.DataHandler;
 
 public class RecipeUI {
     private BufferedReader reader;
@@ -56,6 +56,7 @@ public class RecipeUI {
             }
         }
     }
+
 
     private void displayRecipes(){
         RecipeFileHandler handler = new RecipeFileHandler();
