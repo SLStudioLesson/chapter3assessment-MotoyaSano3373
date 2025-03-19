@@ -29,9 +29,6 @@ public class App {
             }else if(choice.equals("2")){
                 dataHandler = new JSONDataHandler();
                 dataHandler.getMode();
-                // csv.getMode();
-                // RecipeUI ui = new RecipeUI();
-                // ui.displayMenu();
             }else{
                 dataHandler = new CSVDataHandler();
                 dataHandler.getMode();

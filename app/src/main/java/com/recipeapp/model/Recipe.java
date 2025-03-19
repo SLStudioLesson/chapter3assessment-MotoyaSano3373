@@ -1,13 +1,13 @@
-package com.recipeapp.ui;
-
-import com.recipeapp.ui;
+package com.recipeapp.model;
 
 import java.util.ArrayList;
 
 public class Recipe {
     // レシピの名前
     private String name;
+    // レシピの材料リスト
     private ArrayList<Ingredient> ingredients;
+    public int length;
 
     public Recipe(String name, ArrayList<Ingredient> ingredients){
         // nameフィールドとingredientsフィールドそれぞれに、同名の引数を代入する
@@ -24,6 +24,5 @@ public class Recipe {
         // ingredientsフィールドを返す
         return ingredients;
     }
-
 
 }

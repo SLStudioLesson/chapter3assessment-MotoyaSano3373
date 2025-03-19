@@ -1,7 +1,4 @@
-import com.recipeapp.ui;
-
-
-import java.util.ArrayList;
+package com.recipeapp.model;
 
 public class Ingredient {
         // 材料の名前
@@ -16,5 +13,5 @@ public class Ingredient {
         // nameフィールドを返す
         return name;
     }
-    
+
 }
